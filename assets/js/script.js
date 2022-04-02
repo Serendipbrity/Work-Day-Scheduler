@@ -9,7 +9,8 @@ let date = new Date()
 let day = date.getDate();
 let month = date.getMonth()+1;
 let year = date.getFullYear();
-let hour = date.getHours();
+let currentHour = date.getHours();
+console.log(currentHour);
 
 let fullDate = `${month}.${day}.${year}`;
 console.log(fullDate);
@@ -38,13 +39,36 @@ allTimes.addEventListener("click", function(event) {
 }  
 )
 
-document.querySelector('#nine .description').value = localStorage.getItem('nine');
-document.querySelector('#ten .description').value = localStorage.getItem('ten');
-document.querySelector('#eleven .description').value = localStorage.getItem('eleven');
-document.querySelector('#twelve .description').value = localStorage.getItem('twelve');
-document.querySelector('#one .description').value = localStorage.getItem('one');
-document.querySelector('#two .description').value = localStorage.getItem('two');
-document.querySelector('#three .description').value = localStorage.getItem('three');
-document.querySelector('#four .description').value = localStorage.getItem('four');
-document.querySelector('#five .description').value = localStorage.getItem('five');
+var hours = [nine,ten,eleven,twelve,one,two,three,four,five];
 
+   var nine = document.querySelector('#nine .description').value = localStorage.getItem('nine');
+   var ten = document.querySelector('#ten .description').value = localStorage.getItem('ten');
+   var eleven = document.querySelector('#eleven .description').value = localStorage.getItem('eleven');
+   var twelve =document.querySelector('#twelve .description').value = localStorage.getItem('twelve');
+   var one = document.querySelector('#one .description').value = localStorage.getItem('one');
+   var two = document.querySelector('#two .description').value = localStorage.getItem('two');
+   var three = document.querySelector('#three .description').value = localStorage.getItem('three');
+   var four = document.querySelector('#four .description').value = localStorage.getItem('four');
+   var five =document.querySelector('#five .description').value = localStorage.getItem('five');
+
+nine = 9;
+ten = 10;
+eleven = 11;
+twelve = 12;
+one = 13;
+two = 14;
+three = 15;
+four = 16;
+five = 17;
+
+
+function getHour(){
+    for(i = 0; i < hours.length; i++){
+ if (currentHour = hours[i])
+        hours[i].add.className("present");
+ if (currentHour < hours[i])
+        hours[i].add.classList("future");
+ if (currentHour > hours[i])
+        hours[i].add.classList("past");     
+}
+};
