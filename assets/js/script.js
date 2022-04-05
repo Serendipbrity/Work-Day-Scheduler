@@ -44,7 +44,7 @@ allTimes.addEventListener("click", function(event) {
 // var five = 17;
 
 
-
+// get text from each box from local storage
   var nine = document.querySelector('#nine .description').value = localStorage.getItem('nine');
    var ten = document.querySelector('#ten .description').value = localStorage.getItem('ten');
    var eleven = document.querySelector('#eleven .description').value = localStorage.getItem('eleven');
@@ -55,10 +55,20 @@ allTimes.addEventListener("click", function(event) {
    var four = document.querySelector('#four .description').value = localStorage.getItem('four');
    var five =document.querySelector('#five .description').value = localStorage.getItem('five');
 
-   var hours = [nine,ten,eleven,twelve,one,two,three,four,five];
-   console.log(hours);
 
-//    9 = document.getElementById("nine");
+
+
+var t9 = document.getElementById("9");
+var t10 = document.getElementById("10");
+var t11 = document.getElementById("11");
+var t12 = document.getElementById("12");
+var t13 = document.getElementById("13");
+var t14 = document.getElementById("14");
+var t15 = document.getElementById("15");
+var t16 = document.getElementById("16");
+var t17 = document.getElementById("17");
+
+var hours = [t9,t10,t11,t12,t13, t14,t15,t16,t17];
 
 function getHour(){
     for(i = 0; i < hours.length; i++){
@@ -70,3 +80,8 @@ function getHour(){
         hours[i].classList.add("past");     
 }
 };
+getHour();
+
+// $("div.time-block").forEach(function(){
+//    if ($(this) == currentHour)
+// })
